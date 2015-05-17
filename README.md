@@ -10,7 +10,8 @@ git clone https://github.com/sta1us/fantlab_parse.git
 ### Запуск
 Для запуска необходим Python >= 3.0. 
 
-```python fantlab_parse.py url1 [url2 [... urlN]][-i filename] [-o filename] [-v]
+```
+python fantlab_parse.py url1 [url2 [... urlN]][-i filename] [-o filename] [-v]
 ```
 
  где:
@@ -28,19 +29,24 @@ git clone https://github.com/sta1us/fantlab_parse.git
 
 ##### Примеры
 
-```python fantlab_parse.py -h
+```
+python fantlab_parse.py -h
 ```
 
-```python fantlab_parse.py https://fantlab.ru/edition146046
+```
+python fantlab_parse.py https://fantlab.ru/edition146046
 ```
 
-```python fantlab_parse.py -i links.txt
+```
+python fantlab_parse.py -i links.txt
 ```
 
-```python fantlab_parse.py https://fantlab.ru/edition146046 -o code.txt
+```
+python fantlab_parse.py https://fantlab.ru/edition146046 -o code.txt
 ```
 
-```python fantlab_parse.py https://fantlab.ru/edition146046 -i links.txt -o code.txt -v
+```
+python fantlab_parse.py https://fantlab.ru/edition146046 -i links.txt -o code.txt -v
 ```
 ##### Примечание:
 В выходном файле используется перевод строк в unix-стиле. Для корректного отображения в операционной системе Windows желательно использовать сторонний текстовый редактор вместо встроенного "Блокнота". Например, [Notepad++](https://notepad-plus-plus.org/). 
