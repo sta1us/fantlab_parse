@@ -1,5 +1,5 @@
 # fantlab_parse
-Парсер Fantlab.ru в bb-код
+Парсер книг с сайта FantLab.ru в bb-код
 
 ### Установка
 ```
