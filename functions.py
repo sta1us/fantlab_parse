@@ -7,7 +7,7 @@ import re
 import io
 import json
 import os
-from urllib import request, parse
+from urllib import request, parse, error
 from config import linkme_user, linkme_pass, image_host
 
 
@@ -197,6 +197,15 @@ def get_cover_image(html):
     # Проверяем, есть ли большое изображение.
     if 'href' in result:
         image_url = re.findall("href='(.*?)'", result)[0]
+        try:
+            if image_url[:2] == '//':
+                image_url = 'https:' + image_url
+            request.urlopen(image_url)
+        except error.HTTPError as err:
+            if err.code == 404:
+                image_url = re.findall("src='(.*?)'", result)[-1]
+            else:
+                raise
     else:
         image_url = re.findall("src='(.*?)'", result)[-1]
 
