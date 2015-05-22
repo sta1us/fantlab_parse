@@ -341,6 +341,8 @@ def get_book_info(html):
         opis = opis.replace('<br>', '')
         opis = opis.replace('<u>', '[b]')
         opis = opis.replace('</u>', '[/b]')
+        opis = opis.replace('<b>', '[b]')
+        opis = opis.replace('</b>', '[/b]')
         opis = clean_text(opis)
 
     # Получаем блок    "Примечание"
@@ -368,6 +370,8 @@ def get_book_info(html):
         prim = prim.replace('<br>', '')
         prim = prim.replace('<u>', '[b]')
         prim = prim.replace('</u>', '[/b]')
+        prim = prim.replace('<b>', '[b]')
+        prim = prim.replace('</b>', '[/b]')
         prim = clean_text(prim)
 
     return opis, prim
